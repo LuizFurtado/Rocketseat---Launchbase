@@ -1,0 +1,176 @@
+:root {
+  --color-green: #50fa7b;
+  --color-purple: #7159c1
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #282a36;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #FFF;
+}
+
+header {
+  padding: 32px;
+  border-bottom: 1px solid #333;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.links {
+  text-align: center;
+}
+
+div.links a,
+#wrapper p a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 16px;
+  text-decoration: none;
+}
+
+div.links a:hover,
+#wrapper p a {
+  color: var(--color-green);
+  transition: color 200ms;
+}
+
+#wrapper {
+  text-align: center;
+  padding: 32px;
+}
+
+#wrapper img {
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--color-green);
+  margin-bottom: 32px;
+}
+
+#wrapper ul li {
+  padding: 8px;
+  list-style-type: none;
+}
+
+#wrapper h1 {
+  font-size: 44px;
+  line-height: 54px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+
+#wrapper h2 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+#wrapper p {
+  margin: 32px auto;
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#links-social a {
+  border-bottom: 1px solid var(--color-green);
+}
+
+/* Cards */
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color-purple);
+}
+
+.card__image-container img {
+  width: 100%;
+}
+
+.card__content,
+.card__info {
+  padding: 24px;
+}
+
+.card__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card__autor {
+  background-color: var(--color-purple);
+  filter: brightness(90%);
+  padding: 5px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Modal */
+.modal-overlay {
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: #fff;
+  height: 90%;
+  width: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal.full-screen {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.modal .close-modal {
+  color: #000;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.modal .open-in-full-modal {
+  color: #000;
+  position: absolute;
+  right: 36px;
+  top: 8px;
+  cursor: pointer;
+}
+
+/* Modal active */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+}
