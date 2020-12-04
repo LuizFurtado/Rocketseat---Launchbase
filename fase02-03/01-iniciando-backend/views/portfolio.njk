@@ -14,83 +14,20 @@
 
   <section class="cards">
 
-    <div class="card" id="cZvWDTqTGKg">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/cZvWDTqTGKg/maxresdefault.jpg" alt="Quadro de imagens do Pinterest com CSS puro">
+    {% for item in items %}
+      <div class="card" id="{{ item.id }}">
+        <div class="card__image-container">
+          <img src="https://img.youtube.com/vi/{{ item.id }}/maxresdefault.jpg" alt="Capa do vídeo {{ item.title }}">
+        </div>
+        <div class="card__content">
+          <p>{{ item.title }}</p>
+        </div>
+        <div class="card__info">
+          <p>{{ item.duration }}</p>
+          <p class="card__price">{{ item.price }}</p>
+        </div>
       </div>
-      <div class="card__content">
-        <p>Quadro de imagens igual ao Pinterest com CSS puro</p>
-      </div>
-      <div class="card__info">
-        <p>14:13 minutos</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="p34kaxW0WjU">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/p34kaxW0WjU/maxresdefault.jpg" alt="Sistema admin em 12 minutos com Adminbro">
-      </div>
-      <div class="card__content">
-        <p>Sistema admin em 12 minutos com Adminbro</p>
-      </div>
-      <div class="card__info">
-        <p>21:57 minutos</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="XlNLjG2c9uM">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/XlNLjG2c9uM/maxresdefault.jpg" alt="Leitura de textos com Speechsynthesis">
-      </div>
-      <div class="card__content">
-        <p>Leitura de textos com Speechsynthesis</p>
-      </div>
-      <div class="card__info">
-        <p>11:19 minutos</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="r8v-eSWrvc0">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/r8v-eSWrvc0/maxresdefault.jpg" alt="Organização de código com Design Pattern Decorator">
-      </div>
-      <div class="card__content">
-        <p>Organização de código com Design Pattern Decorator</p>
-      </div>
-      <div class="card__info">
-        <p>48:47 minutos</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="-RWPvVcYAC4">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/-RWPvVcYAC4/maxresdefault.jpg" alt="Mini app para cortar imagens">
-      </div>
-      <div class="card__content">
-        <p>HTML5 Canvas e JavaScript para manipular imagens</p>
-      </div>
-      <div class="card__info">
-        <p>85:04 minutos</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="K5yYBJhix5A">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/K5yYBJhix5A/maxresdefault.jpg" alt="Robô que pega imagens do Instagram">
-      </div>
-      <div class="card__content">
-        <p>Extraindo dados de outros sites com Puppeteer JS</p>
-      </div>
-      <div class="card__info">
-        <p>26:50 minutos</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
+    {% endfor %}
 
   </section>
 

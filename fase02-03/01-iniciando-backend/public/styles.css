@@ -86,6 +86,7 @@ div.links a:hover {
 
 .card {
   background-color: var(--color-purple);
+  display: grid;
 }
 
 .card__image-container img {
@@ -100,6 +101,7 @@ div.links a:hover {
 .card__info {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 .card__price {
