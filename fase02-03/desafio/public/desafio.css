@@ -95,6 +95,7 @@ div.links a:hover,
 
 .card {
   background-color: var(--color-purple);
+  cursor: pointer;
 }
 
 .card__image-container img {
@@ -170,9 +171,12 @@ div.links a:hover,
   visibility: visible;
 }
 
+.post {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 iframe {
   width: 100%;
-  height: 90%;
-  position: absolute;
-  top: 5%;
+  height: 100vh;
 }

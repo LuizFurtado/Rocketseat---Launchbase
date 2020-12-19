@@ -1,0 +1,20 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <title>Blog Rocketseat | {{ post.title }}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+{% endblock %}
+
+{% block content %}
+  
+  <div id="wrapper" class="post">
+    <h1>{{ post.title }}</h1>
+  </div>
+
+  <section class="post">
+
+      <iframe src="https://blog.rocketseat.com.br/{{ post.id }}" frameborder="0"></iframe>
+
+  </section>
+
+{% endblock %}
