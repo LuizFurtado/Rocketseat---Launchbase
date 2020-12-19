@@ -15,13 +15,15 @@ module.exports = [
     id: "XlNLjG2c9uM",
     title: "Leitura de textos com Speechsynthesis",
     duration: "11:19 minutos",
-    price: "Free"
+    price: "Free",
+    featured: true
   },
   {
     id: "r8v-eSWrvc0",
     title: "Organização de código com Design Pattern Decorator",
     duration: "48:47 minutos",
-    price: "Free"
+    price: "Free",
+    featured: true
   },
   {
     id: "-RWPvVcYAC4",
@@ -33,6 +35,7 @@ module.exports = [
     id: "K5yYBJhix5A",
     title: "Extraindo dados de outros sites com Puppeteer JS",
     duration: "26:50 minutos",
-    price: "Free"
+    price: "Free",
+    featured: true
   }
 ]
