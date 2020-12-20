@@ -1,0 +1,53 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Foodfy | {{ recipe.title }}</title>
+{% endblock %}
+
+{% block content %}
+  <div class="wrapper">
+    <main>
+      <div class="recipe__header">
+        <div class="recipe__image-container">
+          <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+        </div>
+        <h1>{{ recipe.title }}</h1>
+        <p>{{ recipe.author }}</p>
+      </div>
+
+      <section class="ingredients">
+        <h2>Ingredientes <small class="hide-section">Esconder</small></h2>
+        <div id="ingredients-section">
+          <ul>
+            {% for ingredient in recipe.ingredients %}
+              <li>{{ ingredient }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <section class="preparation">
+        <h2>Modo de preparo <small class="hide-section">Esconder</small></h2>
+        <div id="preparation-section">
+          {% for entry in recipe.preparation %}
+            <p>{{ entry }}</p>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="information">
+        <h2>Informações adicionais <small class="hide-section">Esconder</small></h2>
+        <div id="info-section">
+          {% if recipe.information == "" %}
+            <p>Sem informações adicionais</p>
+          {% else %}
+            <p>{{ recipe.information }}</p>
+          {% endif %}
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="/hide-section.js"></script>
+{% endblock %}
